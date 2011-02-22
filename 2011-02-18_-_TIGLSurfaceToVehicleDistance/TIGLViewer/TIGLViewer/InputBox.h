@@ -27,6 +27,7 @@
 #define INPUTBOX_WIDTH 400
 #define INPUTBOX_HEIGHT 125
 
+
 class InputBoxHelper  
 {
     static HFONT m_hFont;
@@ -41,7 +42,7 @@ class InputBoxHelper
 
     static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 public:
-    // resulting Text from InputBoxHelper
+    // text from InputBox
 	LPTSTR Text;
     BOOL DoModal(LPCTSTR szCaption, LPCTSTR szPrompt);
 

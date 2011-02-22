@@ -46,7 +46,7 @@ InputBoxHelper::InputBoxHelper(HWND hWndParent)
 
 	WNDCLASSEX wcex;
 
-	if (!GetClassInfoEx(hInst, "InputBoxHelper", &wcex))
+	if (!GetClassInfoEx(hInst, "InputBox", &wcex))
 	{
 		wcex.cbSize = sizeof(WNDCLASSEX); 
 
@@ -59,7 +59,7 @@ InputBoxHelper::InputBoxHelper(HWND hWndParent)
 		wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
 		wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW);
 		wcex.lpszMenuName	= NULL;
-		wcex.lpszClassName	= "InputBoxHelper";
+		wcex.lpszClassName	= "InputBox";
 		wcex.hIconSm		= NULL;
 
 		if (RegisterClassEx(&wcex) == 0)
