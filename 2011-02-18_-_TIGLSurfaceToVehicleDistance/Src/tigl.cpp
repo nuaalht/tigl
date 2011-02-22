@@ -1805,15 +1805,18 @@ DLL_EXPORT TiglReturnCode tiglFuselageGetMinumumDistanceToGround(TiglCPACSConfig
 		return TIGL_NULL_POINTER;
 	}
 
+	 // Definition of the axis of rotation
+	 gp_Ax1 RAxis(gp_Pnt(axisPntX, axisPntY, axisPntZ), gp_Dir(axisDirX, axisDirY, axisDirZ));
+
+
 		try {
 			tigl::CCPACSConfigurationManager& manager = tigl::CCPACSConfigurationManager::GetInstance();
 			tigl::CCPACSConfiguration& config = manager.GetConfiguration(cpacsHandle);
 			tigl::CCPACSFuselage& fuselage = config.GetFuselage(fuselageUID);
-//			tigl::CCPACSFuselageSegment& segment = (tigl::CCPACSFuselageSegment&) fuselage.GetSegment(segmentIndex);
-//			gp_Pnt point = segment.GetPointOnXPlane(eta, ypos, pointIndex);
-//			*pointXPtr = point.X();
-//			*pointYPtr = point.Y();
-//			*pointZPtr = point.Z();
+			gp_Pnt point = fuselage.GetMinumumDistanceToGround(RAxis, angle);
+			*pointXPtr = point.X();
+			*pointYPtr = point.Y();
+			*pointZPtr = point.Z();
 			return TIGL_SUCCESS;
 		}
 		catch (std::exception& ex) {

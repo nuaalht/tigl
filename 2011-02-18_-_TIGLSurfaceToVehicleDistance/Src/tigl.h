@@ -1867,7 +1867,7 @@ DLL_EXPORT TiglReturnCode tiglFuselageGetSymmetry(TiglCPACSConfigurationHandle c
 * @param axisDirX        	(in) : X-coordinate of the direction that specifies the axis of rotation
 * @param axisDirY        	(in) : Y-coordinate of the direction that specifies the axis of rotation
 * @param axisDirZ        	(in) : Z-coordinate of the direction that specifies the axis of rotation
-* @param angle        		(in) : The angle by which the fuselage should be turned on the axis of rotation
+* @param angle        		(in) : The angle (in °Degree) by which the fuselage should be turned on the axis of rotation
 * @param pointXPtr    		(out): Pointer to the x-coordinate of the point in absolute world coordinates
 * @param pointYPtr     		(out): Pointer to the y-coordinate of the point in absolute world coordinates
 * @param pointZPtr     		(out): Pointer to the z-coordinate of the point in absolute world coordinates
