@@ -688,6 +688,26 @@ void CTIGLViewerDoc::OnShowWingPoints()
 
 void CTIGLViewerDoc::OnShowWingComponentSegments()
 {
+    CWingDialog dlg(*this);
+    if (dlg.DoModal() != IDOK)
+        return;
+
+    int wingIndex = dlg.GetWingIndex() + 1;
+    if (wingIndex < 1)
+        return;
+
+    myAISContext->EraseAll(Standard_False);
+    tigl::CCPACSWing& wing = GetConfiguration().GetWing(wingIndex);
+
+	for (int segmentIndex = 1; segmentIndex <= wing.GetComponentSegmentCount(); segmentIndex++)
+	{
+		TopoDS_Shape cSegment = wing.GetComponentSegment(segmentIndex).GetLoft();
+		Handle(AIS_Shape) shape = new AIS_Shape(cSegment);
+		shape->SetColor(Quantity_NOC_BLUE2);
+		myAISContext->Display(shape, Standard_True);
+	}
+
+    DrawXYZAxis();
 }
 
 
