@@ -57,6 +57,9 @@ public:
 
     // Popups wings selection dialog and draws a wing by drawing some surface points
     afx_msg void OnShowWingPoints();
+	
+    // Popups wings selection dialog and draws the component Segments of the selected wing
+    afx_msg void OnShowWingComponentSegments();
 
 	// Popups wings selection dialog and draws the profile point from the CPACS file
     afx_msg void OnDrawOverlayCPACSProfilePoints();

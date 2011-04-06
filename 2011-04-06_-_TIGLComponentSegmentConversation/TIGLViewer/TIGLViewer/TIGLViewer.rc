@@ -177,6 +177,8 @@ BEGIN
         MENUITEM "Draw wing profiles",          ID_SHOW_WING_PROFILES
         MENUITEM "Draw wings",                  ID_SHOW_WINGS
         MENUITEM "Draw wing triangulation",     ID_SHOW_WING_TRIANGULATION
+        MENUITEM "Draw wing componentSegment",  ID_SHOW_WING_COMPONENT_SEGMENTS
+
         MENUITEM "Draw wing surface points",    ID_SHOW_WING_POINTS
         MENUITEM "Draw overlay CPACS profile points", 
                                                 ID_CPACS_DRAWOVERLAYCPACSPROFILEPOINTS

@@ -90,6 +90,7 @@ BEGIN_MESSAGE_MAP(CTIGLViewerDoc, OCC_3dBaseDoc)
     ON_COMMAND(ID_SHOW_WINGS, OnShowWings)
     ON_COMMAND(ID_SHOW_WING_TRIANGULATION, OnShowWingTriangulation)
     ON_COMMAND(ID_SHOW_WING_POINTS, OnShowWingPoints)
+	ON_COMMAND(ID_SHOW_WING_COMPONENT_SEGMENTS, OnShowWingComponentSegments)
     ON_COMMAND(ID_SHOW_ALL_POINTS, OnShowAllPoints)
     ON_COMMAND(ID_CPACS_DRAWOVERLAYCPACSPROFILEPOINTS, OnDrawOverlayCPACSProfilePoints)
     ON_COMMAND(ID_SHOW_ALL, OnShowAll)
@@ -682,6 +683,13 @@ void CTIGLViewerDoc::OnShowWingPoints()
 
     DrawXYZAxis();
 }
+
+
+
+void CTIGLViewerDoc::OnShowWingComponentSegments()
+{
+}
+
 
 void CTIGLViewerDoc::OnShowFuselagePoints()
 {
