@@ -31,6 +31,7 @@ namespace tigl
     {
         // This class is used in:
         // CPACSCap
+        // CPACSSheetBasedStructuralElement
         // CPACSWeb
         // CPACSWingRibCell
         // CPACSWingRibCrossSection
